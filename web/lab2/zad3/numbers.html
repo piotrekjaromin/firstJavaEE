@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Numbers</title>
+
+    <script>
+        var counter = 0;
+        function insert(){
+            $('#insertNumber').append(" <input type='text' name='zad3b_"  + counter + "'>");
+            counter = counter + 1;
+        }
+    </script>
+
+</head>
+<body>
+Average:
+<br>
+<form action="/zad2_3" method="GET">
+    <input type="number" name="n1" id="n1">
+    <input type="number" name="n2" id="n2">
+    <input type="number" name="n3" id="n3">
+    <input type="number" name="n4" id="n4">
+    <input type="number" name="n5" id="n5">
+    <input type="submit">
+</form>
+
+Sort:
+<br>
+<form action="/zad2_3" method="POST">
+    <div id="insertNumber">
+        <input type="text" name="zad3b" >
+    </div>
+
+    <button type='button' onclick="insert()">Add number</button><input type="submit">
+</form>
+
+</body>
+</html>
