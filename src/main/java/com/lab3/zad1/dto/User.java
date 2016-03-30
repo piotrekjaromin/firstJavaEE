@@ -43,4 +43,26 @@ public class User {
     public String toString(){
         return "login: " + login + " date: " + loginDate;
     }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user = (User) o;
+
+        if (login != null ? !login.equals(user.login) : user.login != null) return false;
+        if (password != null ? !password.equals(user.password) : user.password != null) return false;
+        return !(loginDate != null ? !loginDate.equals(user.loginDate) : user.loginDate != null);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = login != null ? login.hashCode() : 0;
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (loginDate != null ? loginDate.hashCode() : 0);
+        return result;
+    }
 }

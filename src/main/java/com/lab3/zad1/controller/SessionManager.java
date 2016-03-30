@@ -39,11 +39,11 @@ public class SessionManager extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-//        User currentUser = (User) session.getAttribute("user");
+        User currentUser = (User) session.getAttribute("user");
         session.setAttribute("user", null);
-//        List<User> users = (List<User>) getServletContext().getAttribute("users");
-//        users.remove(currentUser);
-//        getServletContext().setAttribute("users", users);
+        List<User> users = (List<User>) getServletContext().getAttribute("users");
+        users.remove(currentUser);
+        getServletContext().setAttribute("users", users);
         response.sendRedirect("lab3/zad1/sessionManager.jsp");
     }
 }

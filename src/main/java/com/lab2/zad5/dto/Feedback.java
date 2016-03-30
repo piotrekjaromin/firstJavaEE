@@ -1,4 +1,4 @@
-package com.lab2.zad5.model;
+package com.lab2.zad5.dto;
 
 public class Feedback {
     String name;

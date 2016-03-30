@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<computer_parts>
+    <part id="1">
+        <name>name1</name>
+        <price>111</price>
+    </part>
+    <part id="2">
+        <name>name2</name>
+        <price>2222</price>
+    </part>
+    <part id="3">
+        <name>name3</name>
+        <price>33333</price>
+    </part>
+    <part id="4">
+        <name>name4</name>
+        <price>4444444</price>
+    </part>
+</computer_parts>

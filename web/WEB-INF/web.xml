@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>Zad5</servlet-name>
-        <servlet-class>com.lab2.zad5.guestsBook</servlet-class>
+        <servlet-class>com.lab2.zad5.GuestsBook</servlet-class>
         <init-param>
             <param-name>login</param-name>
             <param-value>koper</param-value>

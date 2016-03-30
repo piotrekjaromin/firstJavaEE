@@ -1,0 +1,29 @@
+<taglib>
+        <tlib-version>1.0</tlib-version>
+        <jsp-version>2.0</jsp-version>
+        <uri>indentationEditor</uri>
+        <short-name>Example TLD</short-name>
+        <tag>
+                <name>indentationEditor</name>
+                <tag-class>com.lab3.zad1.tag.IndentationEditor</tag-class>
+                <body-content>scriptless</body-content>
+
+                <attribute>
+                        <name>content</name>
+                        <required>false</required>
+                        <rtexprvalue>true</rtexprvalue>
+                </attribute>
+
+                <attribute>
+                        <name>align</name>
+                        <required>false</required>
+                        <rtexprvalue>true</rtexprvalue>
+                </attribute>
+
+                <attribute>
+                        <name>color</name>
+                        <required>false</required>
+                        <rtexprvalue>true</rtexprvalue>
+                </attribute>
+        </tag>
+</taglib>

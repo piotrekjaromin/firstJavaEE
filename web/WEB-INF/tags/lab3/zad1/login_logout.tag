@@ -17,7 +17,7 @@
     </form>
 </c:when>
 <c:otherwise>
-    user: <%=user.getLogin()%> date: <%=user.getLoginDate()%>
+    current user: <%=user.getLogin()%> date: <%=user.getLoginDate()%>
     <form action="/zad3_1" method="get">
         <input type="submit" value="log out">
     </form>
