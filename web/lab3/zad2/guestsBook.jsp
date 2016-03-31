@@ -1,6 +1,7 @@
 <%@ page import="com.lab2.zad5.dto.Feedback" %>
 <%@ page import="java.util.List" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<jsp:useBean id="feedbacks" scope="application" class="java.util.Vector"></jsp:useBean>
 <html>
 <head>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -39,18 +40,12 @@
     <button type="button" onclick="insertValue()">add to file</button>
 </form>
 
-<%
-    List<Feedback> feedbacks = (List<Feedback>) application.getAttribute("feetbacks");
-    if(feedbacks != null) {
-        for(Feedback feedback : feedbacks){
-            out.println(feedback.getName() + " (" + feedback.getMail() + ") says:<br>");
-            out.println(feedback.getComment() + "<br><br>");
-        }
-    }
-
-%>
-
-
+<c:if test="${feedbacks ne null}">
+    <c:forEach items="${feedbacks}" var="feedback">
+        <c:out value="${feedback.getName()}"/> ( <c:out value="${feedback.getMail()}"/> ) says: <br>
+        <c:out value="${feedback.getComment()}" /> <br><br>
+    </c:forEach>
+</c:if>
 
 </body>
 </html>

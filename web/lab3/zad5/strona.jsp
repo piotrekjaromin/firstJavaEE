@@ -1,5 +1,3 @@
-<%@ page import="com.lab3.zad5.dto.Movie" %>
-<%@ page import="java.util.List" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -9,8 +7,7 @@
 </head>
 <body>
 <h4>Lista Filmow</h4>
-<%List<Movie> movies = (List<Movie>)request.getAttribute("movies");%>
-
+<jsp:useBean id="movies" scope="request" class="java.util.ArrayList"/>
 <table border="1">
   <tr>
     <td>Tytul</td><td>Gatunek</td><td>Rok</td><td>Dochod</td>

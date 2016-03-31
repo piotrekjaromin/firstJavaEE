@@ -1,12 +1,5 @@
-<%@ page import="com.lab2.zad5.dto.Feedback" %>
-<%@ page import="java.util.List" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: piotrek
-  Date: 28.03.16
-  Time: 19:41
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<jsp:useBean id="feedbacksFromFile" scope="application" class="java.util.Vector"/>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,15 +7,13 @@
 </head>
 <body>
 
-<%
-  List<Feedback> feedbacks = (List<Feedback>) application.getAttribute("feetbacksFromFile");
-  if(feedbacks != null) {
-    for(Feedback feedback : feedbacks){
-      out.println(feedback.getName() + " (" + feedback.getMail() + ") says:<br>");
-      out.println(feedback.getComment() + "<br><br>");
-    }
-  }
+<c:if test="${feedbacksFromFile ne null}">
+  <c:forEach items="${feedbacksFromFile}" var="feedback" varStatus="index">
+    <c:out value="${feedback.getName()}"/> ( <c:out value="${feedback.getMail()}"/> ) says: <br>
+    <c:out value="${feedback.getComment()}" /> <button onclick="location.href = '/zad3_2_edit?number=${index.index}'">edit</button><br><br>
+  </c:forEach>
+</c:if>
 
-%>
+
 </body>
 </html>

@@ -27,7 +27,7 @@ public class GuestsBook extends HttpServlet {
         String comment = request.getParameter("comment");
 
         ServletContext servletContext = getServletContext();
-        Vector  <Feedback> feedbacks = (Vector)servletContext.getAttribute("feetbacks");
+        Vector  <Feedback> feedbacks = (Vector)servletContext.getAttribute("feedbacks");
 
         if(feedbacks==null){
             feedbacks = new Vector<>();
@@ -36,7 +36,7 @@ public class GuestsBook extends HttpServlet {
             feedbacks.add(new Feedback(login, mail, comment));
         }
 
-        servletContext.setAttribute("feetbacks", feedbacks);
+        servletContext.setAttribute("feedbacks", feedbacks);
         response.sendRedirect("lab3/zad2/guestsBook.jsp");
     }
 }

@@ -3,8 +3,7 @@
 
 <%--<jsp:useBean id="user" scope="session" class="com.lab3.zad1.dto.User"/>--%>
 
-<%
-    User user = (User) session.getAttribute("user"); %>
+<%User user = (User) session.getAttribute("user"); %>
 
 
 <c:choose>

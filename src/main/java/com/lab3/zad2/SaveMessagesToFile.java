@@ -22,7 +22,7 @@ public class SaveMessagesToFile extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         ServletContext servletContext = getServletContext();
-        Vector  <Feedback> feedbacks = (Vector)servletContext.getAttribute("feetbacks");
+        Vector  <Feedback> feedbacks = (Vector)servletContext.getAttribute("feedbacks");
 
         if(feedbacks!=null){
             PrintWriter writer = new PrintWriter("messages", "UTF-8");

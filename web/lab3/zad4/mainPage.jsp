@@ -5,15 +5,6 @@
 <html>
 <head>
     <title></title>
-    <script>
-      function addToCart() {
-        <%
-
-        %>
-      }
-    </script>
-
-
 </head>
 <body>
 

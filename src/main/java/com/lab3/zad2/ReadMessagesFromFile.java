@@ -30,7 +30,7 @@ public class ReadMessagesFromFile extends HttpServlet {
         }
         br.close();
 
-        getServletContext().setAttribute("feetbacksFromFile", feedbacks);
+        getServletContext().setAttribute("feedbacksFromFile", feedbacks);
         response.sendRedirect("lab3/zad2/showMessagesFromFile.jsp");
     }
 

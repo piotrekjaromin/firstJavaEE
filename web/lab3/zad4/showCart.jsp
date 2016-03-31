@@ -9,9 +9,7 @@
 </head>
 <body>
 
-<%
-  Map<Integer, Integer> cart = (Map<Integer, Integer>) session.getAttribute("cart");
-%>
+<jsp:useBean id="cart" scope="session" class="java.util.TreeMap"/>
 
 <c:import url="computerParts.xml" var="computerParts"/>
 <x:parse xml="${computerParts}" var="output"/>
